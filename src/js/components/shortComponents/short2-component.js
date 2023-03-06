@@ -1,8 +1,12 @@
-const slotItem = document.querySelectorAll('.casino-slot__item');
-slotItem.forEach(item => {
-    let btnItemShow = item.querySelector('.casino-slot__item-info');
-    let textItemInfo = item.querySelector('.casino-slot__item-info-text');
-    btnItemShow.addEventListener('click', ()=> {
-        textItemInfo.classList.toggle('_show');
+const copiedBlocks = document.querySelectorAll('.casinos-overviews__item-copy');
+
+copiedBlocks.forEach(item => {
+    let plush = item.querySelector('span')
+    item.addEventListener('click', ()=>{
+        plush.classList.add('_visible')
+        function remove(){
+            plush.classList.remove('_visible')
+        }
+        setTimeout (remove, 2000)
     })
 })

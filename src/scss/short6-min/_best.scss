@@ -1,0 +1,172 @@
+.casinos-provide{
+  overflow: hidden;
+  &__title{
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px 0;
+    font-family: $font-firs-semb;
+    color: $blue-darken;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: -0.01em;
+    span{
+      display: inline-block;
+      margin: 0 15px 0 0;
+    }
+    a{
+      display: inline-block;
+      max-width: 40px;
+    }
+  }
+
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item{
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background: $white;
+    padding: 15px;
+    &:not(:last-child){
+      margin: 0 0 10px 0;
+    }
+    &-wrap{
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: $white;
+    }
+    &-image{
+      margin: 0 15px 0 0;
+      max-width: 160px;
+      min-width: 160px;
+      img{
+        border-radius: 14px;
+      }
+    }
+    &-title{
+      font-family: $font-firs-reg;
+      color: $blue-darken;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 0.01em;
+      margin: 0 0 3px 0;
+    }
+    &-info{
+      font-size: 13px;
+      line-height: 17px;
+      color: $green;
+      span{
+        font-family: $font-firs-semb;
+        color: $blue-darken;
+      }
+    }
+    &-buttons{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      margin-left: 15px;
+    }
+    &-btn{
+      font-size: 13px;
+      line-height: 20px;
+      border-radius: 8px;
+      padding: 9px 34px 8px;
+      text-align: center;
+      width: 100%;
+      transition: background-color $transition;
+      &-white{
+        background: $grey-white-bg;
+        color: $blue;
+        &:hover{
+          background: $grey-hover;
+        }
+      }
+
+    }
+
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .casinos-provide{
+    margin: 0 0 20px 0;
+    &__title,
+    &__list{
+      padding: 0 15px;
+    }
+    &__title{
+      a{
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .casinos-provide{
+    &__list{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+    }
+
+    &__item{
+      flex-direction: column;
+      &:not(:last-child){
+        margin: 0;
+      }
+      &-wrap{
+        flex-direction: column;
+        align-items: stretch;
+        min-width: auto;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        background: $white;
+      }
+      &-cont{
+        margin: 0 0 15px 0;
+      }
+      &-image{
+        max-width: 100%;
+        margin: 0 0 10px 0;
+        img{
+          min-width: 100%;
+        }
+      }
+      &-buttons{
+        margin: 0;
+        flex-direction: row;
+        width: 100%;
+      }
+      &-btn{
+        width: 100%;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .casinos-provide{
+    &__list{
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 10px;
+    }
+    &__title{
+      font-size: 28px;
+      line-height: 30px;
+      margin: 0 0 20px 0;
+    }
+  }
+}

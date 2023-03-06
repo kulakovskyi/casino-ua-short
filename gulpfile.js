@@ -47,7 +47,7 @@ const paths = {
   srcScss: `${srcFolder}/scss/**/*.scss`,
   buildCssFolder: `${buildFolder}/css`,
   //srcFullJs: `${srcFolder}/js/*.js`,
-  srcFullJs: ['./src/js/script-home.js', './src/js/script-page2.js', './src/js/script-page3.js', './src/js/script-page4.js', './src/js/script-page5.js', './src/js/script-page6.js', './src/js/script-page7.js', './src/js/script-page8.js', './src/js/script-page9.js', './src/js/script-page10.js', './src/js/script-page11.js', './src/js/script-page12.js', './src/js/script-page13.js', './src/js/script-page14.js', './src/js/script-page15.js', './src/js/script-page16.js', './src/js/script-page17.js', './src/js/short1.js'],
+  srcFullJs: ['./src/js/short1.js','./src/js/short2.js'],
   srcMainJs: `${srcFolder}/js/script-page2.js`,
   buildJsFolder: `${buildFolder}/js`,
   srcPartialsFolder: `${srcFolder}/partials`,

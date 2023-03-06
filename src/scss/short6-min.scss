@@ -1,0 +1,50 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "base/nullstyle";
+@import "base/wrapper-aside";
+
+
+[class*="__container"] {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  &._lock {
+    overflow: hidden;
+  }
+  font-family: $font-firs-reg;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: $blue-darken;
+  background: $grey-white-bg;
+}
+
+// подключения компонентов страницы
+
+
+.main{
+  margin: 0 20px 0 0;
+}
+
+
+.aside{
+  min-width: 315px;
+  max-width: 315px;
+  @media screen and (max-width: 600px){
+    min-width: 300px;
+    max-width: 100%;
+  }
+}
+
+//aside
+
+
+// подключения компонентов страницы
+
+@import "short6-min/_best";

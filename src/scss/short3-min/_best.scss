@@ -1,4 +1,4 @@
-.casinos-best{
+.casinos-overview{
   overflow: hidden;
   &__title{
     display: flex;
@@ -34,25 +34,8 @@
     &-wrap{
       position: relative;
       background: $white;
-      padding: 15px 15px 25px;
-      border-bottom: 2px solid $grey-white-bg;
-      &::after,
-      &::before{
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        background: $grey-white-bg;
-        border-radius: 50%;
-        bottom: -13px;
-      }
-      &::after{
-        content: '';
-        left: -13px;
-      }
-      &::before{
-        content: '';
-        right: -13px;
-      }
+      padding: 15px;
+      border-bottom: 1px solid $grey-white-bg;
     }
     &-image{
       margin: 0 0 15px 0;
@@ -61,7 +44,7 @@
       }
     }
     &-title{
-      font-family: $font-firs-semb;
+      font-family: $font-firs-reg;
       color: $blue-darken;
       font-size: 20px;
       line-height: 26px;
@@ -71,7 +54,6 @@
     &-info{
       display: flex;
       align-items: center;
-      margin: 0 0 15px 0;
     }
     &-star{
       display: flex;
@@ -106,6 +88,73 @@
         color: $green;
       }
     }
+    &-bonus{
+      flex: 1 1 auto;
+      padding: 15px;
+      background: $white;
+      border-bottom: 1px solid $grey-white-bg;
+      &-title{
+        font-family: $font-firs-semb;
+        color: $green;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+      }
+      &-subtitle{
+        font-family: $font-firs-semb;
+        color: $blue;
+        font-size: 18px;
+        line-height: 19px;
+        text-transform: uppercase;
+      }
+    }
+    &-code{
+      background: $white;
+      padding: 15px 15px 20px;
+    }
+    &-copy{
+      position: relative;
+      margin: 0 0 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 10px 15px 9px;
+      background: $grey-code;
+      border: 1px dashed $grey-border;
+      border-radius: 8px;
+      color: $green;
+      font-size: 13px;
+      line-height: 20px;
+      &::after{
+        content: '';
+        display: inline-block;
+        margin-left: 5px;
+        width: 14px;
+        height: 14px;
+        background: url("../img/short1-min/copied.svg") no-repeat 0 0/contain;
+      }
+      span{
+        pointer-events: none;
+        display: inline-block;
+        padding: 8px;
+        background-color: $blue-darken;
+        color: $white;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 10px;
+        line-height: 12px;
+        border-radius: 8px;
+        opacity: 0;
+        transition: opacity $transition;
+        &._visible{
+          opacity: 1;
+        }
+      }
+
+
+    }
     &-buttons{
       display: flex;
       align-items: center;
@@ -134,37 +183,12 @@
         }
       }
     }
-    &-bonus{
-      flex: 1 1 auto;
-      padding: 25px 20px;
-      background: $white;
-      &-title{
-        font-family: $font-firs-semb;
-        color: $green;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
-      }
-      &-subtitle{
-        font-family: $font-firs-semb;
-        color: $blue;
-        font-size: 18px;
-        line-height: 19px;
-        margin: 0 0 8px 0;
-        text-transform: uppercase;
-      }
-      &-text{
-        font-size: 11px;
-        line-height: 16px;
-        letter-spacing: 0.04em;
-        color: $green;
-      }
-    }
+
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .casinos-best{
+  .casinos-overview{
     margin: 0 0 20px 0;
     &__title,
     &__list{
@@ -179,7 +203,7 @@
 }
 
 @media screen and (max-width: 700px) {
-  .casinos-best{
+  .casinos-overview{
     &__list{
       display: grid;
       grid-template-columns: auto auto;
@@ -188,7 +212,7 @@
 }
 
 @media screen and (max-width: 550px) {
-  .casinos-best{
+  .casinos-overview{
     &__list{
       display: grid;
       grid-template-columns: 100%;
@@ -197,7 +221,13 @@
     &__item{
       max-width: 100%;
       &-wrap{
-        padding: 15px 15px 25px;
+        padding: 15px;
+      }
+      &-bonus{
+        padding: 15px ;
+      }
+      &-code{
+        padding: 15px ;
       }
     }
     &__title{

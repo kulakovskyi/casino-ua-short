@@ -1,0 +1,333 @@
+.casinos-overviews{
+  overflow: hidden;
+  &__title{
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px 0;
+    font-family: $font-firs-semb;
+    color: $blue-darken;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: -0.01em;
+    span{
+      display: inline-block;
+      margin: 0 15px 0 0;
+    }
+    a{
+      display: inline-block;
+      max-width: 40px;
+    }
+  }
+
+
+  &__list{
+    //display: grid;
+    //grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    //gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item{
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    &:not(:last-child){
+      margin: 0 0 10px 0;
+    }
+    &-wrap{
+      width: 40%;
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: $white;
+      padding: 15px;
+      border-right: 1px solid $grey-white-bg;
+    }
+    &-image{
+      margin: 0 15px 0 0;
+      max-width: 200px;
+      min-width: 200px;
+      img{
+        border-radius: 14px;
+      }
+    }
+    &-title{
+      font-family: $font-firs-reg;
+      color: $blue-darken;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 0.01em;
+      margin: 0 0 3px 0;
+    }
+    &-info{
+      display: flex;
+      align-items: center;
+    }
+    &-star{
+      display: flex;
+      align-items: center;
+      img{
+        max-width: 13px;
+        display: inline-block;
+        margin: 0 5px 0 0;
+      }
+      &-text{
+        margin-top: 2px;
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 0.02em;
+        color: $blue-darken;
+      }
+    }
+    &-top{
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      img{
+        max-width: 11px;
+        display: inline-block;
+        margin: 0 5px 0 0;
+      }
+      &-text{
+        margin-top: 2px;
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 0.02em;
+        color: $green;
+      }
+    }
+    &-bonus{
+      width: 30%;
+      //min-width: 275px;
+      //max-width: 275px;
+      padding: 15px;
+      background: $white;
+      border-right: 1px solid $grey-white-bg;
+      &-title{
+        font-family: $font-firs-semb;
+        color: $green;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+      }
+      &-subtitle{
+        font-family: $font-firs-semb;
+        color: $blue;
+        font-size: 18px;
+        line-height: 19px;
+        text-transform: uppercase;
+        margin: 0 0 8px 0;
+      }
+      &-text{
+        font-size: 11px;
+        line-height: 16px;
+        color: $green;
+      }
+    }
+    &-code{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30%;
+      //max-width: 300px;
+      //min-width: 300px;
+      background: $white;
+      padding: 15px 15px 20px;
+    }
+    &-copy{
+      position: relative;
+      margin: 0 0 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 10px 15px 9px;
+      background: $grey-code;
+      border: 1px dashed $grey-border;
+      border-radius: 8px;
+      color: $green;
+      font-size: 13px;
+      line-height: 20px;
+      &::after{
+        content: '';
+        display: inline-block;
+        margin-left: 5px;
+        min-width: 14px;
+        height: 14px;
+        background: url("../img/short1-min/copied.svg") no-repeat 0 0/contain;
+      }
+      span{
+        pointer-events: none;
+        display: inline-block;
+        padding: 8px;
+        background-color: $blue-darken;
+        color: $white;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 10px;
+        line-height: 12px;
+        border-radius: 8px;
+        opacity: 0;
+        transition: opacity $transition;
+        &._visible{
+          opacity: 1;
+        }
+      }
+
+
+    }
+    &-buttons{
+      display: flex;
+      align-items: center;
+    }
+    &-btn{
+      font-size: 13px;
+      line-height: 20px;
+      border-radius: 8px;
+      padding: 9px 10px 8px;
+      text-align: center;
+      width: calc(50% - 3px);
+      transition: background-color $transition;
+      &-white{
+        background: $grey-white-bg;
+        color: $blue;
+        margin: 0 6px 0 0;
+        &:hover{
+          background: $grey-hover;
+        }
+      }
+      &-blue{
+        color: #FFFFFF;
+        background: $blue;
+        &:hover{
+          background: $blue-hover;
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 1315px){
+  .casinos-overviews{
+    &__item{
+      &-wrap{
+        width: 45%;
+      }
+      &-bonus{
+        width: 25%;
+      }
+      &-code{
+        width: 30%;
+      }
+      &-image{
+        max-width: 140px;
+        min-width: 140px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .casinos-overviews{
+    margin: 0 0 20px 0;
+    &__item{
+      &-wrap{
+        width: 40%;
+      }
+      &-bonus{
+        width: 30%;
+      }
+      &-code{
+        width: 30%;
+      }
+    }
+    &__title,
+    &__list{
+      padding: 0 15px;
+    }
+    &__title{
+      a{
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .casinos-overviews{
+    &__list{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+    }
+
+    &__item{
+      flex-direction: column;
+      &-wrap{
+        flex-direction: column;
+        align-items: stretch;
+        min-width: auto;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        background: $white;
+        padding: 15px;
+        border-bottom: 1px solid $grey-white-bg;
+      }
+      &-image{
+        max-width: 100%;
+        margin: 0 0 15px 0;
+      }
+      &-bonus{
+        max-width: 100%;
+        min-width: auto;
+        width: 100%;
+        flex: 1 1 auto;
+        padding: 15px;
+        background: $white;
+        border-bottom: 1px solid $grey-white-bg;
+
+      }
+      &-code{
+        max-width: 100%;
+        min-width: auto;
+        width: 100%;
+        background: $white;
+        padding: 15px 15px 20px;
+      }
+
+
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .casinos-overviews{
+    &__list{
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 10px;
+    }
+    &__item{
+      max-width: 100%;
+      &-wrap{
+        padding: 15px;
+      }
+      &-bonus{
+        padding: 15px ;
+      }
+      &-code{
+        padding: 15px ;
+      }
+    }
+    &__title{
+      font-size: 28px;
+      line-height: 30px;
+      margin: 0 0 20px 0;
+    }
+  }
+}
