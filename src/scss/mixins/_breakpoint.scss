@@ -1,0 +1,8 @@
+
+$tablet-bp: 1024px;
+
+@mixin breakpoint($bp) {
+  @media screen and (max-width: $bp) {
+    @content;
+  }
+}
